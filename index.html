@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>拼单季首页</title>
+<meta name="description" content="水果，零食，粮油，个护">
+<meta name="keywords" content="">
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/base.css" rel="stylesheet">
+<script >
+window.onload=function(){
+    var time=document.getElementsByClassName("time");
+    function show(){
+    var d1=new Date();   //
+    var s1=Math.floor(d1.getTime()/1000);
+    var d2=new Date(2015,11,25);
+    var s2=Math.floor(d2.getTime()/1000);
+    var s=s2-s1;
+    var y=Math.floor(s/(60*60*24));
+    var h=Math.floor((s-y*(60*60*24))/(60*60));
+    var m=Math.floor((s-y*(60*60*24)-h*(60*60))/60);
+    var j=s-y*(60*60*24)-h*(60*60)-m*60
+      
+    time[0].innerHTML="还剩："+y+"天"+h+"时"+m+"分"+j+"秒";
+    time[1].innerHTML="还剩："+y+"天"+h+"时"+m+"分"+j+"秒";
+    time[2].innerHTML="还剩："+y+"天"+h+"时"+m+"分"+j+"秒";
+    }
+    window.setInterval(show,1000);
+    
+}
+</script>
+</head>
+<body>
+ <!-- 顶部   -->
+<div class="logbar">
+    <div class="container clearfix">
+        <ul class="log l">
+            <li>欢迎来到拼单季!</li>
+            <li><a class="a1" href="">登录</a> </li>
+            <li><a href="">注册</a></li>
+            <li class="li1"><span></span>您的位置：<a class="a1" href="">电子商务产业园</a></li>
+            <li><a href="">[切换]</a></li>
+        </ul>
+        <ul class="right r">
+            <li class="li2"><a href=""> <span></span>购物车（<em>0</em>）</a></li>
+            <li class="li3"><a href="">我的拼单季 <span></span></a>
+            <ul class="xlcd">
+               <li><a href="">账户</a></li>
+               <li><a href="">支付</a></li>
+               <li><a href="">订单</a></li>
+               <li><a href="">我的</a></li>
+            </ul> 
+            </li>
+            
+            <li class="li4"><a href=""><span></span>收藏的商品</a></li>
+            <li><a href="">客户服务</a></li>
+        </ul>
+
+    </div>
+</div>
+<!-- 头部 -->
+    <div class="header">
+        <div class="container">
+        <h1 class="l" ><a href=""><img src="images/logo.png" alt=""></a></h1> 
+        <h4 class="r top-h" ><a href=""><img src="images/ma.png" alt=""><em>扫一扫</em></a></h4>
+        <div class="go-se" style="width:612px;">
+        <form class="clearfix">
+        <div class="emg"><em>商品</em><i></i>
+        <ul class="goods clearfix">
+            <li><a href="">水果</a></li>
+            <li><a href="">零食</a></li>
+            <li><a href="">日用</a></li>
+            <li><a href="">个护</a></li>
+        </ul>
+           </div>
+        <input  type="text" class="text" placeholder="搜索您所需要的商品" ><input style="color:#fff;" type="button" class="tj" value="搜&nbsp;&nbsp;索">
+       
+        </form>
+        <div class="searchb">
+        <a class="lefta" href="">母婴</a>
+        <a href="">宠物</a>
+        <a href="">运动户外</a>
+        <a href="">美妆</a>
+        </div>
+        </div> <img class="sev" src="images/serve.png" alt="">
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+         <div class="nav">
+         <div class="container">
+             <ul class="subnav">
+                 <li class="all"><a href="">全部商品分类</a></li>
+                 <li><a href="">首页</a></li>
+                 <li><a href="">宅家美食</a></li>
+                 <li><a href="">初秋尝鲜</a></li>
+                 <li><a href="">海淘节</a></li>
+                 <li><a href="">美妆新品</a></li>
+             </ul>
+           </div>  
+         </div>
+         <div class="container">
+           <div class="aside">
+                <ul class="sub">
+                    <li>
+                    <div class="sub-li1">
+                        <a  class="a1" href="">食品饮料</a><a href="">碳酸饮料</a><a href="">酸奶</a>
+<a href="">巧克力</a>
+                           
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li1">
+                        <a  class="a1" href="">食品饮料</a><a href="">碳酸饮料</a><a href="">酸奶</a>
+<a href="">巧克力</a> 
+                       
+                    </div>
+                    </li>
+                    <li>
+                        <div class="sub-li1">
+                        <a  class="a1" href="">食品饮料</a><a href="">碳酸饮料</a><a href="">酸奶</a>
+<a href="">巧克力</a>
+                            
+                    </div>
+                    </li>
+                    <li>
+                        <div class="sub-li1">
+                        <a  class="a1" href="">食品饮料</a><a href="">碳酸饮料</a><a href="">酸奶</a>
+<a href="">巧克力</a>
+                        
+                    </div>
+                    </li>
+                    <li>
+                        <div class="sub-li1">
+                        <a  class="a1" href="">食品饮料</a><a href="">碳酸饮料</a><a href="">酸奶</a>
+<a href="">巧克力</a>
+                           
+                    </div>
+                    </li>
+                    <li>
+                        <div class="sub-li1">
+                        <a  class="a1" href="">食品饮料</a><a href="">碳酸饮料</a><a href="">酸奶</a>
+<a href="">巧克力</a>
+                       
+                    </div>
+                    </li>
+                    <li>
+                        <div class="sub-li1">
+                        <a  class="a1" href="">食品饮料</a><a href="">碳酸饮料</a><a href="">酸奶</a>
+<a href="">巧克力</a>
+                     
+                    </div> 
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+            <div class="img">
+                <img class="tu" src="images/banner.png" alt="">
+            </div>
+            <div class="safe">
+                <ul class="safe-icon clearfix">
+                <li class="first"><img src="images/umb.png" alt=""></li>
+                <li><a href=""><img src="images/low.png" alt=""></a></li>
+                <li><a href=""><img src="images/umb.png" alt=""></a></li>
+                <li><a href=""><img src="images/low.png" alt=""></a></li>
+                <li class="last"><a href=""><img src="images/umb.png" alt=""></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+<!-- 每日必看 -->
+<div class="dayloo">
+    <div class="container">
+        <h2 class="dyh">每日必看 MUST CHECK OUT</h2>
+        <div class="fruit f1">
+            <div class="bimg">
+                <a class="img" href=""><img src="images/lizhibanner.png" alt=""></a>
+            <div class="bottom">
+                <a href=""><em class="em1"><img src="images/icon-red-love.png" alt="">123人收藏</em></a>
+                <a href=""><em class="em2"><img src="images/icon-msg.png" alt="">123人评论</em></a>
+                <a href=""><em class="em3"><img src="images/iocn-time.png" alt=""><i class="time"></i></em></a>
+               <em class="em4">一盒299元两盒400元</em>
+            </div>
+            </div>
+                <div class="r-note">
+                <div class="mid">
+                    <a href="">
+                        <h2>新疆阿克利冰糖心水果空运鲜荔枝5KG包邮</h2>
+                    </a>
+                    <p class="p-t">荔枝肉含丰富的维生素C和蛋白质，有助于增强机体免疫功能，提高抗病能力；荔枝有消肿解毒、止血止痛的作用； 荔枝拥有丰富的维生素，可促进微细血管的血液循环，防止雀斑的发生，令皮肤更加光滑。</p>
+                    <h3><em>￥</em>299.00</h3>
+                    <i>33人购买</i>
+                   <p> <a class="now" href="">立即购买</a>
+                    <a class="car" href="">加入购物车</a></p>
+                    <span class="sp1"><a href="">商家：果仙多维</a></span>
+                    <span class="sp2">分享拼单:</span>
+                    <a href=""><img src="images/iocn-qzone.png" alt=""></a>
+                    <a href=""><img src="images/icon-sina.png" alt=""></a>
+                    <a href=""><img src="images/iocn-qzone.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="fruit f2">
+            <div class="bimg">
+                <a class="img" href=""><img class="djx" src="images/applebanner.jpg" alt=""><img class="dj" src="images/col-green.png" alt=""></a>
+            <div class="bottom">
+                <a href=""><em class="em1"><img src="images/icon-red-love.png" alt="">123人收藏</em></a>
+                <a href=""><em class="em2"><img src="images/icon-msg.png" alt="">123人评论</em></a>
+                <a href="" class="a3"><img src="images/iocn-time.png" alt=""><em class="em3"><i class="time"></i></em></a>
+               <em class="em4">一盒299元两盒400元</em>
+            </div>
+            </div>
+            
+             <div class="r-note">
+                <div class="mid">
+                    <a href="">
+                        <h2>新疆阿克利冰糖心水果空运鲜荔枝5KG包邮</h2>
+                    </a>
+                    <p class="p-t">荔枝肉含丰富的维生素C和蛋白质，有助于增强机体免疫功能，提高抗病能力；荔枝有消肿解毒、止血止痛的作用； 荔枝拥有丰富的维生素，可促进微细血管的血液循环，防止雀斑的发生，令皮肤更加光滑。</p>
+                    <h3><em>￥</em>299.00</h3>
+                    <i>33人购买</i>
+                   <p> <a class="now" href="">立即购买</a>
+                    <a class="car" href="">加入购物车</a></p>
+                    <span class="sp1">商家：果仙多维</span>
+                    <span class="sp2">分享拼单:</span>
+                    <a href=""><img src="images/iocn-qzone.png" alt=""></a>
+                    <a href=""><img src="images/icon-sina.png" alt=""></a>
+                    <a href=""><img src="images/iocn-qzone.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="fruit f2 f1">
+           <div class="bimg">
+                <a class="img" href=""><img src="images/lizhibanner.png" alt=""></a>
+            <div class="bottom">
+                <a href=""><em class="em1"><img src="images/icon-red-love.png" alt="">123人收藏</em></a>
+                <a href=""><em class="em2"><img src="images/icon-msg.png" alt="">123人评论</em></a>
+                <a href=""><em class="em3"><img src="images/iocn-time.png" alt=""><i class="time"></i></em></a>
+               <em class="em4">一盒299元两盒400元</em>
+            </div>
+            </div>
+             <div class="r-note">
+                <div class="mid">
+                    <a href="">
+                        <h2>新疆阿克利冰糖心水果空运鲜荔枝5KG包邮</h2>
+                    </a>
+                    <p class="p-t">荔枝肉含丰富的维生素C和蛋白质，有助于增强机体免疫功能，提高抗病能力；荔枝有消肿解毒、止血止痛的作用； 荔枝拥有丰富的维生素，可促进微细血管的血液循环，防止雀斑的发生，令皮肤更加光滑。</p>
+                    <h3><em>￥</em>299.00</h3>
+                    <i>33人购买</i>
+                   <p> <a class="now" href="">立即购买</a>
+                    <a class="car" href="">加入购物车</a></p>
+                    <span class="sp1">商家：果仙多维</span>
+                    <span class="sp2">分享拼单:</span>
+                    <a href=""><img src="images/iocn-qzone.png" alt=""></a>
+                    <a href=""><img src="images/icon-sina.png" alt=""></a>
+                    <a href=""><img src="images/iocn-qzone.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 热卖水果 -->
+<div class="hot-f">
+    <div class="container clearfix">
+        <h3>热卖干果 <a href="">单人购买</a>
+        <a href="">拼单购买</a>
+        <a href="">量多优惠</a> 
+       <a href="" class="more">更多>></a>
+        </h3>
+       
+        <div class="hetao">
+            <a href=""><img src="images/hot.png" alt=""></a>
+        </div>
+        <div class="hetao f2">
+            <a href=""><img src="images/hot.png" alt=""></a>
+        </div>
+        <div class="hetao f2">
+            <a href=""><img src="images/hot.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<!-- 食品饮料 -->
+<div class="hot-f food ">
+    <div class="container clearfix">
+        <h3>新鲜水果 <a href="">单人购买</a>
+        <a href="">拼单购买</a>
+        <a href="">量多优惠</a><em>
+        <a href="" class="more">更多>></a>
+        </h3>
+        
+        <div class="fd">
+            <img src="images/big.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!-- 底部banner -->
+<div class="footbar">
+    <div class="container">
+         <a href=""><img src="images/foot-bar.jpg" alt="footbar"></a>
+         <img src="images/footlink.png" alt="">
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="line"></div>
+        <ul class="foot-a clearfix">
+            <li><a href="">关于我们</a></li>
+            <li><a href="">我们的团队</a></li>
+            <li><a href="">网站联盟</a></li>
+            <li><a href="">热门搜索</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">本店评论</a></li>
+            <li><a href="">诚征英才</a></li>
+            <li><a href="">商家登陆</a></li>
+            <li><a href="">供应商登陆</a></li>
+            <li><a href="">放心搜</a></li>
+            <li><a href="">网购品牌</a></li>
+            <li class="last"><a href="">开放平台</a></li>
+        </ul>
+        <p >郑州市中奥科技网络技术有限公司 &nbsp;&nbsp;&nbsp;公司地址：河南省郑州市高新区科技大道53号中原广告产业园3号楼18层</p>
+        <p>网络文化经营许可证：豫网文[2010]0599-005号 增值电信业务经营许可证：豫B2-20110003</p>
+    </div>
+</div>
+<script src="DD_belatedPNG_0.0.8a.js"></script>
+  <!--[if IE 6]>
+
+<script>
+//<![CDATA[
+DD_belatedPNG.fix('img');
+ //]]>
+</script>
+<![endif]--> 
+</body>
+</html>

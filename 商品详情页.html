@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>商品详情</title>
+<meta name="description" content="水果，零食，粮油，个护">
+<meta name="keywords" content="">
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/base.css" rel="stylesheet">
+<script >
+window.onload=function(){
+    var i1=document.getElementById("i1");
+    var i2=document.getElementById("i2");
+    var i3=document.getElementById("i3");
+    var i4=document.getElementById("i4");
+    function show(){
+    var d1=new Date();   //
+    var s1=Math.floor(d1.getTime()/1000);
+    var d2=new Date(2015,11,25);
+    var s2=Math.floor(d2.getTime()/1000);
+    var s=s2-s1;
+    var y=Math.floor(s/(60*60*24));
+    var h=Math.floor((s-y*(60*60*24))/(60*60));
+    var m=Math.floor((s-y*(60*60*24)-h*(60*60))/60);
+    var j=s-y*(60*60*24)-h*(60*60)-m*60;
+      
+    i1.innerHTML=y;
+    i2.innerHTML=h;
+    i3.innerHTML=m;
+    i4.innerHTML=j;
+    }
+    window.setInterval(show,1000);
+   var minus=document.getElementById("minus") ;
+   var pluse=document.getElementById("pluse");
+   var num2=document.getElementById("num2").innerHTML;
+   pluse.onclick=function(){
+        num2++;
+   }
+}
+</script>
+<style>
+
+.apple{height: 550px;margin-top: 25px;} 
+.b-banner{width: 100%;height: 100%;border:1px solid #e0e0e0;}
+.details{height: 1580px;width: 1200px;margin-top: 75px;}
+.apple-l{width:785px;height: 100%;}
+.apple-r{width: 410px;height: 100%;border-left: 1px solid #ddd;}
+
+ /*<!-- banner -->*/
+.b-left{width: 420px;height: 100%;position: relative;}
+.b-left p{margin: 20px;}
+.b-left p a{color:#333;}
+.big-ap{margin-left:20px;border:1px solid #ddd;}
+.imgs{position: absolute;left: 30px;top: 53px;}
+.imgs img{float: left;margin-right: 20px;}
+.small-ap{margin-left:20px;margin-top: 20px;}
+.small-ap img{margin-right: 16px; transition:all 1s ease; }
+.small-ap img:hover{transform:scale(1.4);}
+.small-ap img:last-child{margin-right: 0px;}
+.b-right{height: 500px;width: 730px;margin: 30px 20px 0 20px;}
+.b-right h2{font:normal normal 20px/50px 'microsoft yahei';}
+.b-right h2 em{float: right;font-size: 14px;color: #bbb;}
+.b-right h2 em i{color: red;}
+.text-p{height: 80px;color: #FFB977;}
+.money{width: 720px;height: 60px;background-color:#FFEFE2; }
+.hem{color: #FF7714;font-size: 38px;height: 60px;line-height: 60px;margin-left: 20px;width: 100px;}
+.lasttime{width:250px;height: 100%;float: left;margin-left: 20px;}
+.hem em{font-size: 28px;}
+.em1,.em2,.em3,.em4{color:#bbb;height: 32px;line-height: 32px;}
+.em3{color:#FF7714;}
+.money span i{color: red;}
+.money span {color: #777;font-size: 14px;display: block;}
+
+.money .sp1:before{content: "";width: 38px;height: 16px;display: inline-block;background:url(images/icon-msg.png) no-repeat bottom center; }
+.money .sp2:before{content: "";width: 38px;height: 16px;display: inline-block;background:url(images/icon-red-love.png) no-repeat bottom center; }
+.money .sp2{margin: 0 25px 0 10px;}
+.icon-r span{float: left;height: 60px;line-height: 60px;font-size: 14px;color: #bbb;}
+.yf{margin-top:10px;height: 45px;line-height: 45px; width: 720px;border-bottom: 1px dashed #e0e0e0;}
+.yf .fre,.number .num,.color .colo,.ruler .colo{margin: 0 5px;color:#bbb;float: left;}
+.yf .fre2{margin-left: 30px;color: #555;}
+.yf .icon1:before{content: "";width: 30px;height: 16px;display: inline-block;background:url(images/icon-JD.png) no-repeat bottom center; }
+.yf .icon2:before{content: "";width: 30px;height: 16px;display: inline-block;background:url(images/icon-taobao.png) no-repeat bottom center; }
+.yf .icon3:before{content: "";width: 30px;height: 16px;display: inline-block;background:url(images/icon-amzion.png) no-repeat bottom center; }
+.yf .icon3{margin-right: 8px;}
+
+.number{height: 45px;line-height: 45px; width: 720px;margin-top: 10px; }
+
+.number .num2{margin-top: 8px;margin-left: 30px; height: 30px;line-height: 30px; width: 100px;border:1px solid #ddd;float: left;text-align: center; }
+.number  .num2 span{height: 30px;line-height:25px;width: 30px;background-color:#F6F4F5;font-size: 35px;color: #ccc;text-align: center;cursor: pointer;}
+.color{height: 55px;width: 720px;line-height: 55px;margin-top: 6px;}
+.change-c span,.change-r span{ display: inline-block; height: 40px;width: 40px;margin-right:15px;border:1px solid #ddd;}
+.change-c span:hover,.change-r span:hover{border-color: #FF7714;}
+.change-c span{margin-top: 8px;}
+.ruler{height: 40px;line-height: 40px;margin-top: 6px;}
+.change-r span{text-align: center; height: 25px;line-height: 25px;margin-top: 8px;}
+.shop-btn{font-size: 18px; width: 720px;height: 80px;line-height: 80px;}
+.shop-btn span{display: inline-block;height: 55px;line-height: 55px;width:175px;text-align: center; background-color: #FF7714;margin-top: 25px;border-radius: 5px;color:#fff}
+.shop-btn .btn1{margin-right: 20px;color:#fff；}
+.shop-btn .btn2{background-color:#FEE4D5;border:1px solid ; color:#FF7714 ; }
+.shop-btn .btn2:hover{background-color: #FF7714;color:#fff;}
+/*<!-- 商品详情 -->*/
+.apple-l h2,.img-4 h2{height: 45px;line-height: 45px;color:#FF7714;font-size: 28px;font-weight: normal;border-bottom:2px solid #bbb; width:765px ;}
+.apple-l h2 i,.apple-r h2 i{font-style: normal; color:#333;font-size: 14px;}
+.apple-l  .text,.detail p{margin-top: 20px;font-size: 16px;color:#ccc;text-indent: 2em;text-align: justify; width:765px;line-height: 25px;}
+.apple-l .text .red-txt{color:#FF5E63;margin-top: 20px;}
+.pro-apple img{margin-right: 28px;margin-top: 20px;}
+.pro-apple .img-r{margin-right: 0;}
+.detail{width:765px;}
+.detail h3{font:normal normal 23px/28px '宋体';width:260px;margin:15px auto; }
+.detail span{display: block;height: 22px;width: 125px;margin: 15px auto; text-align: center;line-height: 22px;font-size: 16px;border-radius: 2px;background-color: #80AB4F;}
+.detail p{text-align: center;}
+.img-4 h2{border-bottom:none;color:#333;margin-top: 20px;font-size: 22px;}
+.img-4 img{margin:20px 20px 20px 0px;}
+.apple-r h2{height: 45px;line-height: 45px;color:#FF7714;font-size: 28px;font-weight: normal;border-bottom:2px solid #bbb; width:395px ;margin-left:16px;}
+.apple-r h3{height: 20px;line-height: 20px;color:#333;font-size: 14px;font-weight: normal;}
+.right1{width: 350px;margin:35px auto;border-bottom: 1px solid #e0e0e0;padding-bottom: 20px;}
+.right1 p{color:#ccc;text-indent: 2em;line-height: 20px;padding-top: 15px;}
+.apple-r .more span{display: block;width: 200px;height: 50px;line-height: 50px; text-align: center;background-color:#FAFAFA;color:#bbb;border-radius: 5px;margin:40px auto;border: 1px solid #e0e0e0;cursor: pointer;}
+h2 .r{height: 20px;line-height: 20px;margin-top: 20px;}
+.quesition{width:350px;margin:30px auto;padding-bottom: 40px;}
+.quesition p{color: #ccc;line-height: 25px;height: 25px;width: 315px;padding-left: 8px;}
+.quesition h3{height: 25px;line-height: 25px;color:#555;font-weight: bold;}
+.quesition  i{color:#555;line-height: 25px;height: 25px;font-weight: bold;}
+
+.fany span{display:inline-block; width: 26px;line-height: 26px;text-align: center; height: 26px;background-color: #fff;border-radius: 2px;border: 1px solid #e0e0e0;margin:35px 5px; }
+.fany .sp3,.fany .sp1{cursor: pointer;}
+.fany .sp2{border-color:#FF7815;color:#FF7815;}
+.advice{width: 350px;margin: 30px auto;clear:both;}
+.advice textarea{width: 350px;height: 200px;}
+.advice span{display: inline-block;line-height: 30px;text-align: center; height:30px;width: 80px;background-color: #FF7815;color:#fff;border: 1px solid #FF7815;border-radius: 4px;margin-top: 10px; }
+.advice .spa2{background-color:#FEE4D5;color:#F94247;margin-left: 20px; }
+.advice .spa2:hover{background-color: #FF7815;color:#fff;}
+</style>
+</head>
+<body>
+ <!-- 顶部   -->
+<div class="logbar">
+    <div class="container clearfix">
+        <ul class="log l">
+            <li>欢迎来到拼单季!</li>
+            <li><a class="a1" href="">登录</a> </li>
+            <li><a href="">注册</a></li>
+            <li class="li1"><span></span>您的位置：<a class="a1" href="">电子商务产业园</a></li>
+            <li><a href="">[切换]</a></li>
+        </ul>
+        <ul class="right r">
+            <li class="li2"><a href=""> <span></span>购物车（<em>0</em>）</a></li>
+            <li class="li3"><a href="">我的拼单季 <span></span></a>
+            <ul class="xlcd">
+               <li><a href="">账户</a></li>
+               <li><a href="">支付</a></li>
+               <li><a href="">订单</a></li>
+               <li><a href="">我的</a></li>
+            </ul> 
+            </li>
+            
+            <li class="li4"><a href=""><span></span>收藏的商品</a></li>
+            <li><a href="">客户服务</a></li>
+        </ul>
+        
+    </div>
+</div>
+<!-- 头部 -->
+    <header>
+        <div class="container">
+        <h1 class="l" ><a href=""><img src="images/logo.png" alt=""></a></h1> 
+        <h4 class="r" ><a href=""><img src="images/ma.png" alt=""><i>扫一扫</i></a></h4>
+        <div class="go-se">
+        <form class="clearfix">
+        <div class="emg">商品<i></i><ul class="goods clearfix">
+            <li><a href="">水果</a></li>
+            <li><a href="">零食</a></li>
+            <li><a href="">日用</a></li>
+            <li><a href="">个护</a></li>
+        </ul>
+        </div>
+        <input  type="text" class="text" placeholder="搜索您所需要的商品" ><input style="color:#fff;" type="button" class="tj" value="搜&nbsp;&nbsp;索">
+       
+        </form>
+        <div class="searchb">
+        <a class="lefta" href="">母婴</a>
+        <a href="">宠物</a>
+        <a href="">运动户外</a>
+        <a href="">美妆</a>
+        </div>
+        </div> <img class="sev" src="images/serve.png" alt="">
+        </div>
+    </header> 
+    <!-- banner -->
+    
+         <nav>
+         <div class="container">
+             <ul class="subnav clearfix">
+                 <li class="all"><a href="">全部商品分类</a></li>
+                 <li><a href="">首页</a></li>
+                 <li><a href="">宅家美食</a></li>
+                 <li><a href="">初秋尝鲜</a></li>
+                 <li><a href="">海淘节</a></li>
+                 <li><a href="">美妆新品</a></li>
+             </ul>
+           </div>  
+         </nav>
+        <div class="apple">
+            <div class="container">
+                <div class="b-banner">
+                    <div class="b-left l">
+                        <p>
+                            <a href="">首页</a> >
+                            <a href="">食品百货</a> >
+                            <a href="">阿克苏冰糖苹果</a>
+                        </p>
+                        <img class="big-ap"  src="images/apple.jpg" alt="">
+                        <div class="imgs"> 
+                        <img src="images/li-green.png" alt="">
+                        <img src="images/li-org.png" alt="">
+                        <img src="images/li-red.png" alt="">
+                        </div>
+                       <div class="small-ap">
+                            <img src="images/list-small.png" alt="">
+                            <img src="images/list-small.png" alt="">
+                            <img src="images/list-small.png" alt="">
+                            <img src="images/list-small.png" alt="">
+                            <img src="images/list-small.png" alt="">
+                            <img src="images/list-small.png" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="b-right r">
+                       <h2>阿克苏冰糖心苹果10公斤<em><i>1126</i>人购买</em></h2>
+                        <p class="text-p">苹果肉含丰富的维生素C和蛋白质，有助于增强机体免疫功能，提高抗病能力；荔枝有消肿解毒、止血止痛的作用； 提高抗病能力；提高抗病能力；荔枝有消肿解毒、止血止痛的作用； 苹果拥有丰富的维生素，可促进微细血管的血液循环，防止雀斑的发生，令皮肤更加光滑。</p>
+                        <div class="money">
+                            <h1 class="hem l"><em>￥</em>299</h1>
+                            <div class="lasttime">
+                            <em class="em1">5人成单&nbsp;&nbsp;</em>
+                            <em class="em2">已有</em><em class="em3">133</em><em class="em4">人参加拼单</em>
+                            <span class="lastt">剩余时间<i id="i1"></i>天<i id="i2"></i>小时<i id="i3"></i>分<i id="i4"></i>秒</span></div>
+                            <div class="icon-r r">
+                                <span class="sp1">1134人评论</span>
+                                <span class="sp2">收藏</span>
+                            </div>
+                             </div>
+                            <div class="yf">
+                                <span class="fre">运费 ：</span>
+                                <span class="fre2">每公斤运费15元</span>
+                                <div class="fre-r r">
+                                    <em class="icon1">京东</em>
+                                    <em class="icon2">淘宝</em>
+                                    <em class="icon3">亚马逊</em>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span class="num">数量 ：</span>
+                                <div  class="num2">
+                                  <span id="minus" class="sp1 l">-</span>
+                                  <em id="num2">1</em>
+                                  <span id="pluse" class="sp2 r">+</span>
+                                </div>
+                            </div>
+                            <div class="color">
+                                <span class="colo">颜色 ：</span>
+                                <div class="change-c">
+                                    <span class="sp1 active"></span>
+                                    <span class="sp2"></span>
+                                    <span class="sp3"></span>
+                                    <span class="sp4"></span>
+                                    <span class="sp5"></span>
+                                </div>
+                            </div>
+                            <div class="ruler">
+                               <span class="colo">尺寸 ：</span>
+                                <div class="change-r">
+                                    <span class="sp1 active">XXL</span>
+                                    <span class="sp2">XL</span>
+                                    <span class="sp3">L</span>
+                                    <span class="sp4">S</span>
+                                </div>
+                            </div>
+                        <div class="shop-btn">
+                          <span class="btn1 btn3">立即购买</span>
+                          <span class="btn2 btn3">加入购物车</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- 商品详情 -->
+<div class="container">
+         <div class="details">
+               <div class="apple-l l">
+
+              <h2>产品信息<i>&nbsp;&nbsp;Product Information</i></h2>
+               <div class="text">
+                   <p class="p-txt">冷库保鲜，现包现发！现在天气热，直发江浙沪皖中通；冷库保险到现在这个价格真是亏着卖的，就是为了挣点好评和回头客，同时大家也能吃到物美价廉的水果，苹果是秋天成熟的，我家已经是冷库保鲜到西安在了，但是肯定不如秋天采摘的时候更脆！！！请大家不要以这个理由为难我了，也谢谢大家体谅下果农，真的非常感谢！</p>
+                   <p class="red-txt">我们这里是乡镇，快递走的比较早，加上苹果需要现包，所以当天12点后订单隔天发货哦，希望大家理解。谢谢</p>
+                   </div>
+                   <div class="pro-apple">
+                       <img src="images/pic-4.jpg" alt=""><img src="images/pic-4.jpg" alt="">
+                   </div>
+                   <div class="detail">
+                     <h3>-------产品细解-------</h3>
+                     <span>等级和质量</span>
+                     <p>果实长圆形，颜色浓红或鲜红似美丽少女娇羞的脸庞<br/>
+        脆甜多汁，风味独特<br/>
+        绝对会让你“口水流下三千尺”<br/>
+        咬一口，甜甜的，脆脆的感觉铺满口腔，顿时感到清爽无比。
+                     </p>
+                     <div class="pro-apple">
+                       <img src="images/pic-5.jpg" alt=""><img class="img-r" src="images/pic-5.jpg" alt="">
+                   </div>
+                   </div>
+                   <div class="img-4">
+                   <h2>如何辨别真伪苹果？</h2>
+                      <img src="images/pic-6.jpg" alt=""><img class="img-r" src="images/pic-6.jpg" alt=""><img src="images/pic-6.jpg" alt=""><img class="img-r" src="images/pic-6.jpg" alt="">
+                   </div>
+               </div>
+               <div class="apple-r r">
+                 <h2>累计评论<i>&nbsp;&nbsp;Cumulative Review</i></h2>
+              
+               <div class="right1">
+                <h3>风儿轻轻的<i class="r">2015年05月01日 10:41</i></h3>
+                 <p>有十一斤的量，个头都不小，苹果味不中淡淡的甜，但是碰伤可坏不少，跟卖家反应后，卖家主动提出了补偿，算是比较有诚意的卖家</p>
+               </div>
+                <div class="right1">
+                <h3>风儿轻轻的<i class="r">2015年05月01日 10:41</i></h3>
+                 <p>有十一斤的量，个头都不小，苹果味不中淡淡的甜，但是碰伤可坏不少，跟卖家反应后，卖家主动提出了补偿，算是比较有诚意的卖家</p>
+               </div>
+                <div class="right1">
+                <h3>风儿轻轻的<i class="r">2015年05月01日 10:41</i></h3>
+                 <p>有十一斤的量，个头都不小，苹果味不中淡淡的甜，但是碰伤可坏不少，跟卖家反应后，卖家主动提出了补偿，算是比较有诚意的卖家</p>
+               </div>
+               <div class="more">
+               <span>
+                 点击查看更多
+               </span>
+               </div>
+               <h2>客户咨询<i>&nbsp;&nbsp;Consultation</i><i class="r">我有疑问</i></h2>
+               <div class="quesition">
+                <h3>Q: 苹果为什么这么难看？</h3>
+                <i class="l">A:</i><p class="l"> 
+                 苹果采用冰川雪水灌溉，沙性土壤栽培，外表会有沙沉，颜色不太艳丽，但味道鲜美。
+                </p>
+               </div>
+                <div class="quesition">
+                <h3>Q: 苹果为什么这么难看？</h3>
+                <i class="l">A:</i><p class="l"> 
+                 苹果采用冰川雪水灌溉，沙性土壤栽培，外表会有沙沉，颜色不太艳丽，但味道鲜美。
+                </p>
+               </div>
+                <div class="quesition">
+                <h3>Q: 苹果为什么这么难看？</h3>
+                <i class="l">A:</i><p class="l"> 
+                 苹果采用冰川雪水灌溉，沙性土壤栽培，外表会有沙沉，颜色不太艳丽，但味道鲜美。
+                </p>
+               </div>
+                <div class="quesition">
+                <h3>Q: 苹果为什么这么难看？</h3>
+                <i class="l">A:</i><p class="l"> 
+                 苹果采用冰川雪水灌溉，沙性土壤栽培，外表会有沙沉，颜色不太艳丽，但味道鲜美。
+                </p>
+               </div>
+                <div class="quesition">
+                <h3>Q: 苹果为什么这么难看？</h3>
+                <i class="l">A:</i><p class="l"> 
+                 苹果采用冰川雪水灌溉，沙性土壤栽培，外表会有沙沉，颜色不太艳丽，但味道鲜美。
+                </p>
+               </div>
+               <div class="fany r">
+                 <em>共一页</em>
+                 <span class="sp1"><</span>
+                 <span class="sp2">1</span>
+                 <span class="sp3">></span>
+               </div>
+               <div class="advice">
+                 <i class="r">您还可输入200字</i>
+                 <textarea placeholder="我也来说一句" cols="30" rows="8"></textarea>
+                 <span class="spa1">发表</span>
+                 <span class="spa2">取消</span>
+               </div>
+               </div>
+           </div>  
+        </div> 
+           
+
+
+<!-- 底部banner -->
+<div class="footbar">
+    <div class="container">
+         
+        <a href=""> <img src="images/footlink.png" alt=""></a>
+    </div>
+</div>
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="line"></div>
+        <ul class="foot-a clearfix">
+            <li><a href="">关于我们</a></li>
+            <li><a href="">我们的团队</a></li>
+            <li><a href="">网站联盟</a></li>
+            <li><a href="">热门搜索</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">本店评论</a></li>
+            <li><a href="">诚征英才</a></li>
+            <li><a href="">商家登陆</a></li>
+            <li><a href="">供应商登陆</a></li>
+            <li><a href="">放心搜</a></li>
+            <li><a href="">网购品牌</a></li>
+            <li class="last"><a href="">开放平台</a></li>
+        </ul>
+        <p >郑州市中奥科技网络技术有限公司 &nbsp;&nbsp;&nbsp;公司地址：河南省郑州市高新区科技大道53号中原广告产业园3号楼18层</p>
+        <p>网络文化经营许可证：豫网文[2010]0599-005号 增值电信业务经营许可证：豫B2-20110003</p>
+    </div>
+</footer>
+
+</body>
+</html>
